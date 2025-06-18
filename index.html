@@ -166,13 +166,13 @@
                     <h3 class="text-2xl font-bold mb-4 text-center text-green-700">Công cụ Phát Hiện Watermark</h3>
                     <div class="space-y-6">
                         <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-green-500">
-                            <h4 class="font-bold text-xl mb-1">AudioSeal (Meta)</h4>
+                            <h4 class="font-bold text-xl mb-1">AudioSeal (Meta)(Chưa test)</h4>
                             <p class="text-slate-600">Công nghệ SOTA (State-of-the-art) có bản demo công khai trên github, phát hiện watermark AI, cách chạy rất phức tạp và nhiều lỗi trên colab( Update sau)</p>
                         </div>
                         <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-green-500">
                              <div class="flex items-center justify-between">
                                 <div>
-                                    <h4 class="font-bold text-xl mb-1">MatchTune Detector(https://www.matchtune.com/deepmatch)</h4>
+                                    <h4 class="font-bold text-xl mb-1">MatchTune Detector(https://www.matchtune.com/deepmatch)       (Đã test) </h4>
                                     <p class="text-slate-600">Thông báo chính thức trong việc nhận diện nhạc có gán nhãn AI.( với bản gốc của Suno, công cụ đã phát hiện có watermark AI, còn với bản được remix, công cụ không phát hiện được watermark AI.
                                         <br>
                                         Dự đoán: Không thực sự nhận biết là có watermark AI trong nhạc hay không, mà việc nhận biết nhạc do AI tạo ra phụ thuộc vào tone giọng ca sĩ/vocal, kết cấu drum/bass tự động mà AI tạo ra).</p>
@@ -190,15 +190,15 @@
                     <h3 class="text-2xl font-bold mb-4 text-center text-red-700">Công cụ Loại Bỏ Watermark</h3>
                     <div class="space-y-6">
                         <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-red-500">
-                            <h4 class="font-bold text-xl mb-1">AI Audio Fingerprint Remover</h4>
+                            <h4 class="font-bold text-xl mb-1">AI Audio Fingerprint Remover( Đã test)</h4>
                             <p class="text-slate-600">Mã nguồn mở, xử lý được nhiều "watermark" chung nhưng **không hiệu quả** với watermark nhúng sâu của Suno.</p>
                         </div>
                         <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-red-500">
-                            <h4 class="font-bold text-xl mb-1">Tái Sinh Tín Hiệu (Resynthesis)</h4>
+                            <h4 class="font-bold text-xl mb-1">Tái Sinh Tín Hiệu (Resynthesis)(Đã test)</h4>
                             <p class="text-slate-600">Dùng AI khác tạo lại bản nhạc chỉ đơn thuần là thay thế watermark cũ bằng một watermark mới từ AI đó.</p>
                         </div>
                         <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-red-500">
-                            <h4 class="font-bold text-xl mb-1">Biến Đổi Thủ Công( Phần mềm Abode Auditon)</h4>
+                            <h4 class="font-bold text-xl mb-1">Biến Đổi Thủ Công( Phần mềm Abode Auditon)( Đã test)</h4>
                             <p class="text-slate-600">Các kỹ thuật như EQ, Pitch Shift trong Abode Auditon làm giảm nghiêm trọng chất lượng âm thanh nhưng watermark vẫn tồn tại.</p>
                         </div>
                     </div>
@@ -206,9 +206,127 @@
             </div>
         </section>
 
+        <!-- Audio Playback Section -->
+        <section class="mb-16 bg-white p-8 rounded-2xl shadow-xl">
+            <h2 class="section-title text-3xl font-bold text-center">Mẫu Âm Thanh Thử Nghiệm</h2>
+            <p class="max-w-3xl mx-auto text-center text-slate-600 mb-8">Nghe và so sánh các file âm thanh được sử dụng trong thử nghiệm. Bao gồm bản gốc từ Suno AI và các phiên bản đã được xử lý.</p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Original Tracks with AI Detection Images -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-center text-blue-600 mb-4">Bản Gốc Suno AI (Có Watermark)</h3>
+                    
+                    <!-- Stay - Original -->
+                    <div class="bg-gray-50 p-6 rounded-xl border-2 border-blue-200">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-bold text-lg text-gray-800">Stay - Tùng A&R (Bản Gốc)</h4>
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium">AI Detected</span>
+                        </div>
+                        <audio controls class="w-full mb-4">
+                            <source src="stay - Tùng A&R (vocal ổn, beat ổn).mp3" type="audio/mpeg">
+                            Trình duyệt của bạn không hỗ trợ phát âm thanh.
+                        </audio>
+                        <div class="text-center">
+                            <img src="AI_Image2.png" alt="Kết quả phát hiện AI cho bài Stay" class="w-full max-w-md mx-auto rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform" onclick="openImageModal(this)">
+                            <p class="text-sm text-gray-600 mt-2">Kết quả phân tích AI Detection cho "Stay"</p>
+                        </div>
+                    </div>
+
+                    <!-- Done With You - Original -->
+                    <div class="bg-gray-50 p-6 rounded-xl border-2 border-blue-200">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-bold text-lg text-gray-800">Done With You - Tùng A&R (Bản Gốc Suno)</h4>
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium">AI Detected</span>
+                        </div>
+                        <audio controls class="w-full mb-4">
+                            <source src="Done With You - Tùng A&R bản gốc Suno.wav" type="audio/wav">
+                            Trình duyệt của bạn không hỗ trợ phát âm thanh.
+                        </audio>
+                        <div class="text-center">
+                            <img src="AI_Image4.png" alt="Kết quả phát hiện AI cho bài Done With You" class="w-full max-w-md mx-auto rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform" onclick="openImageModal(this)">
+                            <p class="text-sm text-gray-600 mt-2">Kết quả phân tích AI Detection cho "Done With You"</p>
+                        </div>
+                    </div>
+
+                    <!-- Where Love Lights the Way - Original -->
+                    <div class="bg-gray-50 p-6 rounded-xl border-2 border-blue-200">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-bold text-lg text-gray-800">Where Love Lights the Way (Bản Gốc)</h4>
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium">AI Detected</span>
+                        </div>
+                        <audio controls class="w-full mb-4">
+                            <source src="Where Love Lights the Way- Tùng A&R( bản gốc).mp3" type="audio/mpeg">
+                            Trình duyệt của bạn không hỗ trợ phát âm thanh.
+                        </audio>
+                        <div class="text-center">
+                            <img src="AI_Image34.png" alt="Kết quả phát hiện AI cho bài Where Love Lights the Way" class="w-full max-w-md mx-auto rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform" onclick="openImageModal(this)">
+                            <p class="text-sm text-gray-600 mt-2">Kết quả phân tích AI Detection cho "Where Love Lights the Way"</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Processed/Modified Tracks -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-semibold text-center text-green-600 mb-4">Bản Đã Xử Lý/Remix</h3>
+                    
+                    <!-- Stay - Remix -->
+                    <div class="bg-gray-50 p-6 rounded-xl border-2 border-green-200">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-bold text-lg text-gray-800">Stay (Bản Remix)</h4>
+                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">Remix</span>
+                        </div>
+                        <audio controls class="w-full mb-4">
+                            <source src="Stay remix.mp3" type="audio/mpeg">
+                            Trình duyệt của bạn không hỗ trợ phát âm thanh.
+                        </audio>
+                        <div class="text-center">
+                            <img src="AI_Image3.png" alt="Kết quả phát hiện AI cho bài Stay remix" class="w-full max-w-md mx-auto rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform" onclick="openImageModal(this)">
+                            <p class="text-sm text-gray-600 mt-2">Kết quả phân tích AI Detection cho "Stay Remix"</p>
+                        </div>
+                    </div>
+
+                    <!-- Done With You - Remix -->
+                    <div class="bg-gray-50 p-6 rounded-xl border-2 border-green-200">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-bold text-lg text-gray-800">Done With You (Bản Remix)</h4>
+                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">Remix</span>
+                        </div>
+                        <audio controls class="w-full mb-4">
+                            <source src="Done With You bản remix.mp3" type="audio/mpeg">
+                            Trình duyệt của bạn không hỗ trợ phát âm thanh.
+                        </audio>
+                        <div class="text-center">
+                            <img src="AI_Image3.png" alt="Kết quả phát hiện AI cho bài Done With You remix" class="w-full max-w-md mx-auto rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform" onclick="openImageModal(this)">
+                            <p class="text-sm text-gray-600 mt-2">Kết quả phân tích AI Detection cho "Done With You Remix"</p>
+                        </div>
+                    </div>
+
+                    <!-- When Love Lights The Way - Remix -->
+                    <div class="bg-gray-50 p-6 rounded-xl border-2 border-green-200">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="font-bold text-lg text-gray-800">When Love Lights The Way (Bản Remix)</h4>
+                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">Remix</span>
+                        </div>
+                        <audio controls class="w-full mb-4">
+                            <source src="When Love Lights The Way remix.mp3" type="audio/mpeg">
+                            Trình duyệt của bạn không hỗ trợ phát âm thanh.
+                        </audio>
+                        <div class="text-center">
+                            <img src="AI_Image3.png" alt="Kết quả phát hiện AI cho bài When Love Lights The Way remix" class="w-full max-w-md mx-auto rounded-lg shadow-md cursor-pointer hover:scale-105 transition-transform" onclick="openImageModal(this)">
+                            <p class="text-sm text-gray-600 mt-2">Kết quả phân tích AI Detection cho "When Love Lights The Way Remix"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 p-4 bg-yellow-50 border-l-4 border-yellow-400 rounded-r-lg">
+                <p class="text-yellow-800"><strong>Lưu ý:</strong> Sử dụng tai nghe hoặc loa chất lượng tốt để có thể cảm nhận được sự khác biệt giữa các phiên bản. Các file âm thanh này được sử dụng để thử nghiệm khả năng phát hiện và loại bỏ watermark AI.</p>
+            </div>
+        </section>
+
         <!-- Section 3: The Test Bench -->
         <section class="mb-16 bg-white p-8 rounded-2xl shadow-xl">
-            <h2 class="section-title text-3xl font-bold text-center">Thử nghiệm công cụ: AI Audio Fingerprint Remover</h2>
+            <h2 class="section-title text-3xl font-bold text-center">Thử nghiệm công cụ: AI Audio Fingerprint Remover (Đã test)</h2>
             <p class="max-w-3xl mx-auto text-center text-slate-600 mb-8">Thử nghiệm công cụ mã nguồn mở này ở các chế độ khác nhau. Kết quả cho thấy dù tệp âm thanh bị thay đổi,phát hiện được watermark, nhưng cốt lõi của Suno vẫn không bị loại bỏ.</p>
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
@@ -270,6 +388,50 @@
                     Original file hash:  8561527e9a385ecc9eefd54c3dd6da7dce33f4b04d6f80dc93b78966a9f2e648<br>
                     Processed file hash: 35ed93d95b424f980d878a0f9d7045415afdb821589fc2809de6705275f980fe<br>
                     <strong class="files-different">Kết quả : là mã hóa dạng đặc biệt.( update sau việc dịch ngược các mã hóa này).</strong>
+                </div>
+            </div>
+
+            <!-- Watermark Removal Audio Demonstration -->
+            <div class="test-item">
+                <h4>🎵 Demo Âm Thanh: Trước và Sau Khi Xử Lý</h4>
+                <p class="mb-6">So sánh trực tiếp file âm thanh trước và sau khi sử dụng AI Audio Fingerprint Remover</p>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Before Watermark Removal -->
+                    <div class="bg-red-50 p-4 rounded-lg border border-red-200">
+                        <div class="flex items-center justify-between mb-3">
+                            <h5 class="font-bold text-gray-800">Input (Trước xử lý)</h5>
+                            <span class="bg-red-100 text-red-600 px-2 py-1 rounded text-sm">Original</span>
+                        </div>
+                        <audio controls class="w-full mb-3">
+                            <source src="input2.mp3" type="audio/mpeg">
+                            Trình duyệt của bạn không hỗ trợ phát âm thanh.
+                        </audio>
+                        <div class="text-sm text-red-700">
+                            <p><strong>Kích thước:</strong> ~4.5MB</p>
+                            <p><strong>Chất lượng:</strong> Cao, có watermark</p>
+                        </div>
+                    </div>
+
+                    <!-- After Watermark Removal -->
+                    <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                        <div class="flex items-center justify-between mb-3">
+                            <h5 class="font-bold text-gray-800">Output (Sau xử lý)</h5>
+                            <span class="bg-green-100 text-green-600 px-2 py-1 rounded text-sm">Processed</span>
+                        </div>
+                        <audio controls class="w-full mb-3">
+                            <source src="output2.mp3" type="audio/mpeg">
+                            Trình duyệt của bạn không hỗ trợ phát âm thanh.
+                        </audio>
+                        <div class="text-sm text-green-700">
+                            <p><strong>Kích thước:</strong> ~3.88 MB (-13%)</p>
+                            <p><strong>Chất lượng:</strong> Giảm đáng kể</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                    <p class="text-orange-800 text-sm"><strong>Nhận xét:</strong> Công cụ đã xử lý file nhưng chất lượng âm thanh bị ảnh hưởng nghiêm trọng. Kích thước file giảm mạnh cho thấy đã có thay đổi về cấu trúc âm thanh, tuy nhiên watermark có thể vẫn tồn tại ở dạng khác.</p>
                 </div>
             </div>
         </div>
@@ -345,6 +507,75 @@
                          
                      </div>
                      <img src="image2.png" alt="Dữ liệu chi tiết về thử nghiệm các công cụ watermark" class="w-full h-auto rounded-lg shadow-md cursor-pointer transition-transform hover:scale-105" onclick="openImageModal(this)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Image Explanation Section -->
+    <section class="bg-white p-8 md:p-12">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="section-title text-3xl font-bold text-center mb-8">Giải Thích Chi Tiết Hình Ảnh</h2>
+            <p class="text-center text-slate-600 mb-8 text-lg">Hướng dẫn hiểu các biểu đồ phân tích watermark và kết quả nghiên cứu</p>
+            
+            <div class="space-y-8">
+                <!-- Datasets Explanation -->
+                <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
+                    <h3 class="text-xl font-bold text-blue-800 mb-4">📊 Các Hàng (Datasets):</h3>
+                    <div class="space-y-3 text-blue-700">
+                        <p><strong>LJ, M4, LibriSpeech:</strong> Đây là tên của ba bộ dữ liệu âm thanh công khai khác nhau được sử dụng trong nghiên cứu để đánh giá các sơ đồ watermark AI âm thanh. Mỗi hàng hiển thị cách các sơ đồ watermark khác nhau hoạt động trên một loại dữ liệu âm thanh cụ thể (ví dụ: giọng nói hoặc âm nhạc).</p>
+                    </div>
+                </div>
+
+                <!-- Watermarking Schemes Explanation -->
+                <div class="bg-green-50 p-6 rounded-xl border-l-4 border-green-500">
+                    <h3 class="text-xl font-bold text-green-800 mb-4">🔧 Các Cột (Watermarking Schemes):</h3>
+                    <div class="space-y-3 text-green-700">
+                        <p><strong>Unwatermarked:</strong> Cột này hiển thị âm thanh gốc, chưa được thủy vân. Nó đóng vai trò là đường cơ sở để so sánh.</p>
+                        <p><strong>Timbre, AudioSeal, WavMark, SilentCipher, FSVC, Patchwork, Norm-Space, audiowmark, RobustDNN:</strong> Đây là tên của 9 sơ đồ watermark âm thanh tiên tiến mà các nhà nghiên cứu đã tái tạo bằng mã nguồn mở và thử nghiệm trong nghiên cứu của họ. Mỗi cột đại diện cho một phương pháp cụ thể.</p>
+                    </div>
+                </div>
+
+                <!-- Audio Players Explanation -->
+                <div class="bg-purple-50 p-6 rounded-xl border-l-4 border-purple-500">
+                    <h3 class="text-xl font-bold text-purple-800 mb-4">🎵 Trình phát âm thanh (Audio Players):</h3>
+                    <div class="space-y-3 text-purple-700">
+                        <p>Dưới mỗi nhãn dữ liệu và sơ đồ thủy vân, có một trình phát âm thanh nhỏ (ví dụ: "0:00 / 0:05"). Các trình phát này cho phép người dùng nghe trực tiếp các mẫu âm thanh:</p>
+                        <ul class="list-disc list-inside ml-4 space-y-1">
+                            <li>Âm thanh gốc</li>
+                            <li>Âm thanh đã được gắn mác bằng các phương pháp khác nhau</li>
+                            <li>Có thể cả âm thanh đã bị tấn công (mặc dù các hình ảnh này không hiển thị rõ ràng các phiên bản bị tấn công, nhưng đó là trọng tâm của nghiên cứu)</li>
+                        </ul>
+                        <p>Điều này giúp đánh giá chất lượng âm thanh và mức độ không thể nhận biết của watermark.</p>
+                    </div>
+                </div>
+
+                <!-- Spectrograms Explanation -->
+                <div class="bg-orange-50 p-6 rounded-xl border-l-4 border-orange-500">
+                    <h3 class="text-xl font-bold text-orange-800 mb-4">📈 Phổ đồ (Spectrograms):</h3>
+                    <div class="space-y-3 text-orange-700">
+                        <p>Dưới mỗi trình phát âm thanh, có một hình ảnh được dán nhãn "Spectrograms". Phổ đồ là biểu diễn trực quan của tín hiệu âm thanh, hiển thị cách các tần số khác nhau thay đổi theo thời gian.</p>
+                        <p><strong>Các đường/hộp màu đỏ:</strong> Trong một số phổ đồ, bạn có thể thấy các đường hoặc hộp màu đỏ. Những dấu hiệu này có thể chỉ ra:</p>
+                        <ul class="list-disc list-inside ml-4 space-y-1">
+                            <li>Vị trí mà watermark được nhúng vào tín hiệu âm thanh</li>
+                            <li>Những thay đổi đáng kể do quá trình watermark hoặc các cuộc tấn công gây ra</li>
+                            <li>Giúp các nhà nghiên cứu và người xem hình dung tác động của watermark lên cấu trúc tần số của âm thanh</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Summary -->
+                <div class="bg-gray-100 p-6 rounded-xl border-2 border-gray-300">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">📝 Tổng quát:</h3>
+                    <div class="space-y-3 text-gray-700">
+                        <p>Các hình ảnh này là một phần quan trọng của bản demo, cho phép người dùng tương tác và trực quan hóa các kết quả của nghiên cứu. Chúng minh họa:</p>
+                        <ul class="list-disc list-inside ml-4 space-y-1">
+                            <li>Cách các sơ đồ watermark khác nhau thay đổi âm thanh.</li>
+                            <li>Mức độ "không thể nhận biết" của chúng trên các bộ dữ liệu khác nhau.</li>
+                            <li>Cung cấp một cái nhìn giao diện về các watermark AI trong âm thanh.</li>
+                        </ul>
+                        
+                    </div>
                 </div>
             </div>
         </div>
