@@ -41,13 +41,55 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            height: 300px;
-            max-height: 350px;
+            height: 250px;
+            max-height: 300px;
+        }
+        @media (min-width: 640px) {
+            .chart-container {
+                height: 300px;
+                max-height: 350px;
+            }
         }
         @media (min-width: 768px) {
             .chart-container {
                 height: 350px;
                 max-height: 400px;
+            }
+        }
+        
+        /* Additional responsive styles */
+        @media (max-width: 640px) {
+            .responsive-text-lg {
+                font-size: 1rem;
+            }
+            .responsive-text-xl {
+                font-size: 1.125rem;
+            }
+            .responsive-text-2xl {
+                font-size: 1.25rem;
+            }
+            .responsive-text-3xl {
+                font-size: 1.5rem;
+            }
+            .responsive-padding {
+                padding: 1rem;
+            }
+            .responsive-margin {
+                margin: 0.5rem 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .test-item {
+                padding: 1rem;
+                margin-bottom: 1rem;
+            }
+            .metrics-row {
+                gap: 0.5rem;
+            }
+            .metric {
+                font-size: 0.75rem;
+                padding: 0.25rem 0.75rem;
             }
         }
         .stat-card {
@@ -131,36 +173,36 @@
 <body class="antialiased">
 
     <!-- Header -->
-    <header class="header-gradient text-white text-center p-8 md:p-16">
-        <div class="container mx-auto max-w-5xl">
-            <h1 class="text-3xl md:text-5xl font-bold mb-4">Watermark Âm Thanh AI</h1>
-            <p class="text-lg md:text-xl text-blue-100">Phân tích toàn cảnh về khả năng phát hiện và tính khả thi trong việc loại bỏ "dấu vết" do Suno AI tạo ra.</p>
+    <header class="header-gradient text-white text-center p-4 sm:p-6 md:p-8 lg:p-16">
+        <div class="container mx-auto max-w-5xl px-4">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Watermark Âm Thanh AI</h1>
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl text-blue-100 leading-relaxed">Phân tích toàn cảnh về khả năng phát hiện và tính khả thi trong việc loại bỏ "dấu vết" do Suno AI tạo ra.</p>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto p-4 md:p-8 -mt-10">
+    <main class="container mx-auto p-4 sm:p-6 md:p-8 -mt-6 md:-mt-10">
 
         <!-- Section 1: The Core Dilemma -->
-        <section class="mb-16">
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="stat-card p-8 rounded-2xl shadow-lg text-center">
-                    <h2 class="text-2xl font-semibold text-green-600 mb-2">PHÁT HIỆN</h2>
-                    <p class="text-6xl font-bold text-green-500 mb-4">Khả Thi</p>
-                    <p class="text-slate-600">Các hệ thống chuyên biệt có thể nhận diện watermark của Suno với độ chính xác tương đối, được xây xựng bởi công nghệ chuyên dụng.</p>
+        <section class="mb-12 md:mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <div class="stat-card p-6 md:p-8 rounded-2xl shadow-lg text-center">
+                    <h2 class="text-xl md:text-2xl font-semibold text-green-600 mb-2">PHÁT HIỆN</h2>
+                    <p class="text-4xl sm:text-5xl md:text-6xl font-bold text-green-500 mb-4">Khả Thi</p>
+                    <p class="text-sm md:text-base text-slate-600">Các hệ thống chuyên biệt có thể nhận diện watermark của Suno với độ chính xác tương đối, được xây xựng bởi công nghệ chuyên dụng.</p>
                 </div>
-                <div class="stat-card p-8 rounded-2xl shadow-lg text-center">
-                    <h2 class="text-2xl font-semibold text-red-600 mb-2">LOẠI BỎ</h2>
-                    <p class="text-6xl font-bold text-red-500 mb-4">Bất Khả Thi</p>
-                    <p class="text-slate-600">Có công cụ thông báo có thể xóa watermark nhưng không có công cụ công khai nào có thể xóa hoàn toàn watermark mà không phá hủy chất lượng âm thanh gốc.</p>
+                <div class="stat-card p-6 md:p-8 rounded-2xl shadow-lg text-center">
+                    <h2 class="text-xl md:text-2xl font-semibold text-red-600 mb-2">LOẠI BỎ</h2>
+                    <p class="text-4xl sm:text-5xl md:text-6xl font-bold text-red-500 mb-4">Bất Khả Thi</p>
+                    <p class="text-sm md:text-base text-slate-600">Có công cụ thông báo có thể xóa watermark nhưng không có công cụ công khai nào có thể xóa hoàn toàn watermark mà không phá hủy chất lượng âm thanh gốc.</p>
                 </div>
             </div>
         </section>
 
         <!-- Section 2: Market Landscape: Detection vs. Removal -->
-        <section class="mb-16">
-            <h2 class="section-title text-3xl font-bold text-center">Các công cụ đã nghiên cứu</h2>
-            <div class="grid md:grid-cols-2 gap-8">
+        <section class="mb-12 md:mb-16">
+            <h2 class="section-title text-2xl md:text-3xl font-bold text-center">Các công cụ đã nghiên cứu</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
                 <!-- Detection Tools -->
                 <div>
                     <h3 class="text-2xl font-bold mb-4 text-center text-green-700">Công cụ Phát Hiện Watermark</h3>
@@ -207,20 +249,20 @@
         </section>
 
         <!-- Audio Playback Section -->
-        <section class="mb-16 bg-white p-8 rounded-2xl shadow-xl">
-            <h2 class="section-title text-3xl font-bold text-center">Mẫu Âm Thanh Thử Nghiệm Trên Deepmatch</h2>
-            <p class="max-w-3xl mx-auto text-center text-slate-600 mb-8">Nghe và so sánh các file âm thanh được sử dụng trong thử nghiệm. Bao gồm bản gốc từ Suno AI và các phiên bản đã được xử lý.</p>
+        <section class="mb-12 md:mb-16 bg-white p-4 md:p-8 rounded-2xl shadow-xl">
+            <h2 class="section-title text-2xl md:text-3xl font-bold text-center">Mẫu Âm Thanh Thử Nghiệm</h2>
+            <p class="max-w-3xl mx-auto text-center text-sm md:text-base text-slate-600 mb-6 md:mb-8 px-4">Nghe và so sánh các file âm thanh được sử dụng trong thử nghiệm. Bao gồm bản gốc từ Suno AI và các phiên bản đã được xử lý.</p>
             
-            <div class="grid md:grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
                 <!-- Original Tracks with AI Detection Images -->
                 <div class="space-y-6">
                     <h3 class="text-xl font-semibold text-center text-blue-600 mb-4">Bản Gốc Suno AI (Có Watermark)</h3>
                     
                     <!-- Stay - Original -->
-                    <div class="bg-gray-50 p-6 rounded-xl border-2 border-blue-200">
-                        <div class="flex items-center justify-between mb-4">
-                            <h4 class="font-bold text-lg text-gray-800">Stay - Tùng A&R (Bản Gốc)</h4>
-                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm font-medium">AI Detected</span>
+                    <div class="bg-gray-50 p-4 md:p-6 rounded-xl border-2 border-blue-200">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
+                            <h4 class="font-bold text-base md:text-lg text-gray-800">Stay - Tùng A&R (Bản Gốc)</h4>
+                            <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-xs md:text-sm font-medium self-start sm:self-auto">AI Detected</span>
                         </div>
                         <audio controls class="w-full mb-4">
                             <source src="stay - Tùng A&R (vocal ổn, beat ổn).mp3" type="audio/mpeg">
@@ -325,10 +367,10 @@
         </section>
 
         <!-- Section 3: The Test Bench -->
-        <section class="mb-16 bg-white p-8 rounded-2xl shadow-xl">
-            <h2 class="section-title text-3xl font-bold text-center">Thử nghiệm công cụ: AI Audio Fingerprint Remover (Đã test)</h2>
-            <p class="max-w-3xl mx-auto text-center text-slate-600 mb-8">Thử nghiệm công cụ mã nguồn mở này ở các chế độ khác nhau. Kết quả cho thấy dù tệp âm thanh bị thay đổi,phát hiện được watermark, nhưng cốt lõi của Suno vẫn không bị loại bỏ.</p>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+        <section class="mb-12 md:mb-16 bg-white p-4 md:p-8 rounded-2xl shadow-xl">
+            <h2 class="section-title text-xl md:text-2xl lg:text-3xl font-bold text-center">Thử nghiệm công cụ: AI Audio Fingerprint Remover (Đã test)</h2>
+            <p class="max-w-3xl mx-auto text-center text-sm md:text-base text-slate-600 mb-6 md:mb-8 px-4">Thử nghiệm công cụ mã nguồn mở này ở các chế độ khác nhau. Kết quả cho thấy dù tệp âm thanh bị thay đổi,phát hiện được watermark, nhưng cốt lõi của Suno vẫn không bị loại bỏ.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                 <div>
                     <h3 class="text-xl font-semibold text-center mb-4">Thời Gian Xử Lý (giây)</h3>
                     <div class="chart-container h-64 md:h-80">
@@ -490,10 +532,10 @@
     </main>
 
     <!-- Section 6: Visual Evidence -->
-    <section class="bg-gray-50 p-8 md:p-12 mt-16">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="section-title text-3xl font-bold text-center mb-8">Hình ảnh minh họa</h2>
-            <div class="grid md:grid-cols-2 gap-8">
+    <section class="bg-gray-50 p-4 md:p-8 lg:p-12 mt-12 md:mt-16">
+        <div class="container mx-auto max-w-5xl px-4">
+            <h2 class="section-title text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8">Hình ảnh minh họa</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                 <div class="bg-white p-6 rounded-xl shadow-lg">
                     <div class="text-center mb-4">
                         <h3 class="text-xl font-semibold text-slate-700">Biểu Đồ Phân Tích Watermark 1</h3>
@@ -513,15 +555,15 @@
     </section>
 
     <!-- Detailed Image Explanation Section -->
-    <section class="bg-white p-8 md:p-12">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="section-title text-3xl font-bold text-center mb-8">Giải Thích Chi Tiết Hình Ảnh</h2>
-            <p class="text-center text-slate-600 mb-8 text-lg">Hướng dẫn hiểu các biểu đồ phân tích watermark và kết quả nghiên cứu</p>
+    <section class="bg-white p-4 md:p-8 lg:p-12">
+        <div class="container mx-auto max-w-5xl px-4">
+            <h2 class="section-title text-2xl md:text-3xl font-bold text-center mb-6 md:mb-8">Giải Thích Chi Tiết Hình Ảnh</h2>
+            <p class="text-center text-slate-600 mb-6 md:mb-8 text-sm md:text-base lg:text-lg">Hướng dẫn hiểu các biểu đồ phân tích watermark và kết quả nghiên cứu</p>
             
             <div class="space-y-8">
                 <!-- Datasets Explanation -->
-                <div class="bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500">
-                    <h3 class="text-xl font-bold text-blue-800 mb-4">📊 Các Hàng (Datasets):</h3>
+                <div class="bg-blue-50 p-4 md:p-6 rounded-xl border-l-4 border-blue-500">
+                    <h3 class="text-lg md:text-xl font-bold text-blue-800 mb-3 md:mb-4">📊 Các Hàng (Datasets):</h3>
                     <div class="space-y-3 text-blue-700">
                         <p><strong>LJ, M4, LibriSpeech:</strong> Đây là tên của ba bộ dữ liệu âm thanh công khai khác nhau được sử dụng trong nghiên cứu để đánh giá các sơ đồ watermark AI âm thanh. Mỗi hàng hiển thị cách các sơ đồ watermark khác nhau hoạt động trên một loại dữ liệu âm thanh cụ thể (ví dụ: giọng nói hoặc âm nhạc).</p>
                     </div>
